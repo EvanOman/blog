@@ -1,0 +1,15 @@
+evan_oman:
+  name: "Evan Oman"
+  bio: "Building pragmatic software and experimenting with coding agents."
+  avatar: /assets/images/avatar.png
+  location: "San Francisco, CA"
+  links:
+    - label: GitHub
+      icon: fab fa-github
+      url: "https://github.com/evanoman"
+    - label: LinkedIn
+      icon: fab fa-linkedin
+      url: "https://www.linkedin.com/in/evanoman"
+    - label: RSS
+      icon: fas fa-rss
+      url: "/feed.xml"

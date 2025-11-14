@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+
+usage() {
+  cat <<USAGE
+Usage: bin/dev [serve|build|doctor]
+  serve  - Run the site locally with live reload (default)
+  build  - Produce the static site in _site/
+  doctor - Run Jekyll's health checks
+USAGE
+}
+
+command="${1:-serve}"
+shift || true
+
+case "$command" in
+  serve)
+    bundle exec jekyll serve --livereload "$@"
+    ;;
+  build)
+    bundle exec jekyll build "$@"
+    ;;
+  doctor)
+    bundle exec jekyll doctor "$@"
+    ;;
+  -h|--help|help)
+    usage
+    ;;
+  *)
+    echo "Unknown command: $command" >&2
+    usage
+    exit 1
+    ;;
+esac
