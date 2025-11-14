@@ -39,6 +39,8 @@ See `docs/authoring.md` for filename conventions, required front matter, and tag
 
 GitHub Actions (`.github/workflows/pages.yml`) builds the site with Jekyll on every push to `main` and deploys it to the GitHub Pages environment. You only need to wire the repository to Pages in the repo settings and optionally add a custom domain.
 
+> **Base URL tip:** Project Pages live under `https://<user>.github.io/<repo>`, so set `_config.yml` with `url: https://<user>.github.io` and `baseurl: /<repo>` (this repo already uses `/blog`). For a custom domain, set `url` to that domain and clear `baseurl`.
+
 ## Q&A
 
 - **Change the theme skin?** Update `minimal_mistakes_skin` in `_config.yml` to any supported skin (`dark`, `neon`, `contrast`, etc.).

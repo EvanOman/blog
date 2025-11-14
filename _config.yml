@@ -3,8 +3,8 @@ locale: en-US
 title: "Evan Oman"
 name: "Evan Oman"
 description: "Notes on software engineering and coding agents."
-url: "https://example.com" # Update after choosing a production domain
-baseurl: "" # Leave blank for root
+url: "https://evanoman.github.io"
+baseurl: "/blog"
 permalink: /:categories/:year/:month/:day/:title/
 
 # Author + social profiles
