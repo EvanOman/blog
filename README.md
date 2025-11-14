@@ -17,12 +17,17 @@ This repository hosts Evan Oman's Jekyll-powered blog about software engineering
    gem install bundler
    bundle install
    ```
+4. Install [just](https://github.com/casey/just):
+   ```bash
+   brew install just
+   ```
 
 ## Local development
 
-- `bin/dev` (default) – runs `bundle exec jekyll serve --livereload`
-- `bin/dev build` – runs `bundle exec jekyll build`
-- `bin/dev doctor` – runs `bundle exec jekyll doctor`
+- `just` or `just serve` – runs `bundle exec jekyll serve --livereload`
+- `just serve -- --drafts` – preview `_drafts/` posts
+- `just build` – runs `bundle exec jekyll build`
+- `just doctor` – runs `bundle exec jekyll doctor`
 
 The site will be available at `http://127.0.0.1:4000` with live reload.
 

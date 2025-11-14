@@ -5,7 +5,7 @@ This doc captures how to write Markdown posts for the blog so future you doesn�
 ## File locations
 
 - Published posts live in `_posts/` and must follow `YYYY-MM-DD-slug.md` filenames.
-- Drafts go in `_drafts/`. Run `JEKYLL_ENV=development bundle exec jekyll serve --drafts` (or `JEKYLL_ENV=development bin/dev serve --drafts`) to preview them locally.
+- Drafts go in `_drafts/`. Run `JEKYLL_ENV=development bundle exec jekyll serve --drafts` (or `JEKYLL_ENV=development just serve -- --drafts`) to preview them locally.
 - Standalone pages live in `_pages/` and can use any filename.
 
 ## Front matter schema
@@ -49,7 +49,7 @@ Other helpful options supported by Minimal Mistakes defaults:
 
 ## Preview + publish checklist
 
-1. Run `bin/dev doctor` to catch broken links, missing front matter, or future-dated mistakes.
-2. Run `bin/dev` and review the post locally.
+1. Run `just doctor` to catch broken links, missing front matter, or future-dated mistakes.
+2. Run `just serve` and review the post locally.
 3. Commit the Markdown file (and any assets) to the `main` branch.
 4. Push to GitHub; Pages will rebuild automatically. Watch the “Pages build and deployment” workflow run for confirmation.
